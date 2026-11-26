@@ -103,8 +103,13 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .
 
 /* ---------- 롤링 화면 (index.html) ---------- */
 .page-roll { background: var(--bg); }
-.roll-stage { min-height: 100vh; min-height: 100svh; display: flex; align-items: center; overflow: hidden; }
-.roll-stage .marquee { width: 100%; }
+.roll-stage { min-height: 100vh; min-height: 100svh; display: flex; align-items: center; justify-content: center; overflow: hidden; padding: 0 24px; }
+/* 가운데 기준으로 카드 4장(272px × 4 + 간격 24px × 3)만 보이는 창 */
+.roll-stage .marquee { width: 100%; max-width: calc(272px * 4 + 24px * 3); margin: 0 auto; }
+.roll-stage .marquee-viewport {
+  -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 28px, #000 calc(100% - 28px), transparent 100%);
+  mask-image: linear-gradient(90deg, transparent 0, #000 28px, #000 calc(100% - 28px), transparent 100%);
+}
 
 .marquee { position: relative; }
 .marquee-viewport {
@@ -277,6 +282,7 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .
   .logo { font-size: 16px; }
   .site-nav a { padding: 7px 10px; font-size: 14px; }
   .card { width: 64vw; max-width: 280px; }
+  .roll-stage { padding: 0; }
   .marquee-viewport { -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 20px, #000 calc(100% - 20px), transparent 100%); mask-image: linear-gradient(90deg, transparent 0, #000 20px, #000 calc(100% - 20px), transparent 100%); }
   .marquee-track { gap: 16px; }
 
