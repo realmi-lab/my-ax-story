@@ -124,16 +124,16 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .
 /* 카드 */
 .card { flex: 0 0 auto; width: 272px; display: block; border-radius: 16px; -webkit-user-select: none; user-select: none; }
 .card-thumb {
-  position: relative; aspect-ratio: 16 / 10; border-radius: var(--radius); overflow: hidden; margin-bottom: 16px;
+  position: relative; aspect-ratio: 4 / 3; border-radius: var(--radius); overflow: hidden; margin-bottom: 16px;
   background: var(--thumb);
 }
 /* 이미지 바탕(#F1F3F5)과 썸네일 바탕이 같아서, 줄여 넣어도 이음새 없이 사물 둘레에 여백이 생긴다 */
-.card-thumb img { width: 100%; height: 100%; object-fit: cover; transform: scale(.78); transition: transform .45s var(--ease); -webkit-user-drag: none; }
+.card-thumb img { width: 100%; height: 100%; object-fit: cover; transform: scale(.82); transition: transform .45s var(--ease); -webkit-user-drag: none; }
 .card-thumb img.is-broken, .post-figure img.is-broken { visibility: hidden; }
 .card-thumb.is-fallback::after, .post-figure.is-fallback::after {
   content: "AX"; position: absolute; right: 14px; bottom: 8px; font-size: 40px; font-weight: 600; letter-spacing: -0.04em; color: rgba(28, 32, 40, .12);
 }
-.card:hover .card-thumb img { transform: scale(.82); }
+.card:hover .card-thumb img { transform: scale(.86); }
 .card-cat { font-size: 14px; font-weight: 600; letter-spacing: 0; color: var(--accent-ink); margin-bottom: 6px; }
 .card-title {
   font-family: var(--font-title); font-size: 18px; font-weight: 700; line-height: 1.45; letter-spacing: -0.01em; color: var(--text-1);
