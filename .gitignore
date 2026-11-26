@@ -1,0 +1,10 @@
+# 이미지 생성 원본·이전 버전 백업 (용량이 커서 이 컴퓨터에만 보관)
+assets/img/_raw/
+# 지금 화면에 쓰지 않는 이미지
+assets/img/hero.jpg
+assets/img/badge-core.png
+# 예전 설문 화면 보관본
+_backup/
+# 도구 캐시
+.impeccable/
+.DS_Store
